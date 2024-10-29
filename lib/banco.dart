@@ -13,7 +13,7 @@ class BancoDeDados {
         return db.transaction((txn) async {
           await txn.execute('CREATE TABLE receitas(id INTEGER PRIMARY KEY, titulo TEXT, imagemUrl TEXT, ingredientes TEXT, instrucoes TEXT, favorito INTEGER DEFAULT 0, id_usuario INTEGER)');
           await txn.execute('CREATE TABLE usuario(id INTEGER PRIMARY KEY, nome TEXT, email TEXT, avatar TEXT, login TEXT, senha TEXT)');
-          await txn.rawInsert('INSERT INTO usuario (nome, email, login, senha, avatar) VALUES (?, ?, ?, ?, ?)', ['Frank', 'frank@gmail.com', 'frank', '123456', 'https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-cartoon-color-simple-male-avatar-png-image_1934459.jpg']);
+          await txn.rawInsert('INSERT INTO usuario (nome, email, login, senha, avatar) VALUES (?, ?, ?, ?, ?)', ['Breno', 'brenoteste@gmail.com', 'Breno', '123456', 'https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-cartoon-color-simple-male-avatar-png-image_1934459.jpg']);
         });
       },
       version: 1,
